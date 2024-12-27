@@ -12,7 +12,10 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-print(pwd)
+# 현재 경로 위치를 출력
+current_path = os.getcwd()
+print(f"현재 경로: {current_path}")
+
 
 # 로컬 이미지 경로 설정
 background_image_path = "/nushb/marathon_tracker/main/marathon_tracker/marathon.jpg"
