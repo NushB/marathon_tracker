@@ -4,7 +4,7 @@ import os
 import requests
 import time
 
-FASTAPI_URL = "https://0ef0-2001-2d8-200c-5509-f89b-3300-835d-7165.ngrok-free.app"  # ngrok URL
+FASTAPI_URL = "https://76ab-1-235-14-106.ngrok-free.app/find_clip"  # ngrok URL
 
 # 로컬 이미지 파일을 Base64로 변환
 def get_base64_of_bin_file(bin_file):
@@ -13,7 +13,7 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 # 로컬 이미지 경로 설정
-background_image_path = "client/marathon.jpg"
+background_image_path = "marathon.jpg"
 
 # Base64로 변환한 이미지 가져오기
 if os.path.exists(background_image_path):
