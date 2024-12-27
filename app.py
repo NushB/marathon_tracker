@@ -12,7 +12,7 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-print(cd)
+print(pwd)
 
 # 로컬 이미지 경로 설정
 background_image_path = "/nushb/marathon_tracker/main/marathon_tracker/marathon.jpg"
