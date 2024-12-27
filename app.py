@@ -12,8 +12,10 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
+print(cd)
+
 # 로컬 이미지 경로 설정
-background_image_path = "nushb/marathon_tracker/main/marathon_tracker/marathon.jpg"
+background_image_path = "/nushb/marathon_tracker/main/marathon_tracker/marathon.jpg"
 
 # Base64로 변환한 이미지 가져오기
 if os.path.exists(background_image_path):
@@ -77,7 +79,7 @@ if st.button("🔍 Search"):
             # 처리 완료
             animation_placeholder.empty()  # 애니메이션 제거
             if response.status_code == 200:
-                clip_path = "nushb/marathon_tracker/main/marathon_tracker/output/clip.mp4"
+                clip_path = "/nushb/marathon_tracker/main/marathon_tracker/output/clip.mp4"
                 with open(clip_path, "wb") as f:
                     f.write(response.content)
                 # 비디오 출력
