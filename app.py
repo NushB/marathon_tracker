@@ -4,6 +4,8 @@ import os
 import requests
 import time
 
+FASTAPI_URL = "https://0ef0-2001-2d8-200c-5509-f89b-3300-835d-7165.ngrok-free.app"  # ngrok URL
+
 # 로컬 이미지 파일을 Base64로 변환
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -69,7 +71,7 @@ if st.button("🔍 Search"):
             status_message.markdown("<p style='text-align: center; font-size: 20px; color: white;'>러너분의 영상을 향해 달려가고 있어요!</p>", unsafe_allow_html=True)
 
             # 비디오 생성 요청
-            response = requests.get(f"http://localhost:8000/find_clip?bib_number={bib_number}")
+            response = requests.get(FASTAPI_URL, params={"bib_number": bib_number})
             time.sleep(3)  # 실제 로딩 시간 (테스트용)
 
             # 처리 완료
