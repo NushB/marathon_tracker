@@ -13,7 +13,7 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 # 로컬 이미지 경로 설정
-background_image_path = "marathon.jpg"
+background_image_path = "../marathon_tracker/marathon.jpg"
 
 # Base64로 변환한 이미지 가져오기
 if os.path.exists(background_image_path):
